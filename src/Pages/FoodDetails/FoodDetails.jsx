@@ -23,7 +23,7 @@ const FoodDetails = () => {
     );
   } else {
     return (
-      <section id="food-details" className="py-5">
+      <section id="food-details" className="py-5 mt-5">
         <div className="container">
           <div className="row align-items-center justify-content-between">
             <div className="col-lg-5">
@@ -47,7 +47,7 @@ const FoodDetails = () => {
 
               <button className="btn-app d-flex">
                 <AiOutlineShoppingCart />
-                Add
+                Add to cart
               </button>
               <Swiper
                 dir="rtl"

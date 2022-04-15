@@ -1,0 +1,17 @@
+.signIn-container,
+.signUp-container {
+  display: grid;
+  place-items: center;
+  min-height: 50vh;
+}
+.form-wrapper {
+  width: 450px;
+  padding: 2rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 5px;
+}
+.form-wrapper input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+}
