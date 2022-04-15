@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../App";
 import logo from "../../../Assets/images/logo2.png";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import "./../Styles/Styles.css";
 const SignUp = () => {
+  const { isAuth } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from.pathname || "/";
+  useEffect(() => {
+    if (isAuth) {
+      navigate(from, { replace: true });
+    }
+  }, [isAuth, navigate, from]);
   return (
     <div className="signIn-container">
       <div className="signIn-wrapper">

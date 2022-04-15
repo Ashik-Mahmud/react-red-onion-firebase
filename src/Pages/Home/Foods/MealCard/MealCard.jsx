@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const MealCard = ({ food }) => {
   const navigate = useNavigate();
-  console.log(food);
+
   return (
     <div className="col-lg-4">
       <div
