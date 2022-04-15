@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import SocialLogin from "../SocialLogin/SocialLogin";
 import "./../Styles/Styles.css";
 const SignIn = () => {
   return (
@@ -27,6 +29,13 @@ const SignIn = () => {
           <div className="my-3">
             <button className="btn-app">Sign In</button>
           </div>
+          <p>
+            Need Account?{" "}
+            <Link to="/sign-up" className="colorize cursor-pointer">
+              Create
+            </Link>
+          </p>
+          <SocialLogin />
         </form>
       </div>
     </div>

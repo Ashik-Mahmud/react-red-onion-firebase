@@ -2,7 +2,7 @@
 .signUp-container {
   display: grid;
   place-items: center;
-  min-height: 50vh;
+  min-height: 70vh;
 }
 .form-wrapper {
   width: 450px;
@@ -14,4 +14,24 @@
 .form-wrapper input {
   padding: 0.7rem;
   border: 1px solid #ccc;
+}
+
+p.line {
+  position: relative;
+  color: var(--primary-color);
+  text-align: center;
+}
+.line::after,
+.line::before {
+  content: "";
+  width: 45%;
+  height: 1px;
+  background: var(--primary-color);
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.line::after {
+  right: 0%;
 }
