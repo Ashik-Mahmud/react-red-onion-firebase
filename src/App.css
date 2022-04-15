@@ -75,3 +75,24 @@ li {
     transform: scale(1);
   }
 }
+
+.counter {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  width: 140px;
+  padding: 0.7rem;
+  border-radius: 50px;
+}
+.counter input {
+  width: 100%;
+  outline: none;
+}
+.counter span {
+  font-size: 1.1rem;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  display: none;
+}

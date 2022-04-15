@@ -14,7 +14,7 @@ const Navbar = () => {
             <li className="nav-item px-2">
               <NavLink className="nav-link" to="/">
                 <MdOutlineShoppingCart />{" "}
-                <sup className="badge bg-danger rounded-circle">0</sup>
+                {/* <sup className="badge bg-danger rounded-circle">0</sup> */}
               </NavLink>
             </li>
             <li className="nav-item px-2">
