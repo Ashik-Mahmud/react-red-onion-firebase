@@ -5,4 +5,27 @@
   background-size: cover;
   background-repeat: repeat;
   min-height: 60vh;
+  display: grid;
+  place-items: center;
+}
+.hero .search-wrapper .input-group-custom {
+  width: 600px;
+  background-color: var(--accent-color);
+  padding: 0.4rem;
+  margin: 1rem auto;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  border-radius: 50px;
+}
+.search-wrapper input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+}
+.search-wrapper button {
+  position: relative;
+  border-radius: 50px;
 }
