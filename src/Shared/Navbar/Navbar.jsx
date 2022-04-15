@@ -40,9 +40,11 @@ const Navbar = () => {
                   <div>
                     <span>{auth?.currentUser?.displayName}</span>
                     <small className="d-block">
-                      {auth?.currentUser?.email.length > 15
-                        ? auth?.currentUser?.email.slice(0, 15) + "..."
-                        : auth?.currentUser?.email}
+                      {auth?.currentUser?.email
+                        ? auth?.currentUser?.email?.length > 15
+                          ? auth?.currentUser?.email.slice(0, 15) + "..."
+                          : auth?.currentUser?.email
+                        : "not available"}
                     </small>
                   </div>
                 </li>
@@ -52,7 +54,9 @@ const Navbar = () => {
                   </button>
                 </li>
                 <li className="nav-item px-2">
-                  <NavLink to="/order">Order</NavLink>
+                  <NavLink className="nav-link" to="/order">
+                    Order History
+                  </NavLink>
                 </li>
               </>
             ) : (
