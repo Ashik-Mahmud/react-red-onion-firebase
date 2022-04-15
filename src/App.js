@@ -9,6 +9,7 @@ import Lunch from './Pages/Home/Foods/Lunch/Lunch';
 import Home from './Pages/Home/Home/Home';
 import SignIn from './Pages/Login/SignIn/SignIn';
 import SignUp from './Pages/Login/SignUp/SignUp';
+import Order from './Pages/Order/Order';
 import Footer from './Shared/Footer/Footer';
 import Navbar from './Shared/Navbar/Navbar';
 function App() {
@@ -27,6 +28,7 @@ function App() {
          <Route path='/food-details/:slug/:foodId' element={<FoodDetails />} />
          <Route path='/login' element={<SignIn />} />
          <Route path='/sign-up' element={<SignUp />} />
+         <Route path='/order' element={<Order />} />
      </Routes>
      {!location?.pathname.includes("food-details") && <Footer />}
     </>
