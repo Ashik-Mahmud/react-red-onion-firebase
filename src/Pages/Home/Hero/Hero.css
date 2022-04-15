@@ -1,0 +1,8 @@
+/* hero  */
+.hero {
+  background-color: #fcf5e1;
+  background-image: url(../../../Assets/images/bannerbackground.png);
+  background-size: cover;
+  background-repeat: repeat;
+  min-height: 60vh;
+}
