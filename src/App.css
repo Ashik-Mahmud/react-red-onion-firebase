@@ -1,6 +1,6 @@
 /* variables  */
 :root {
-  --primary-color: #72b252;
+  --primary-color: #ff2a4c;
   --secondary-color: #333;
   --accent-color: #fff;
 
@@ -47,4 +47,21 @@ li {
   display: flex;
   align-items: center;
   gap: 0.2rem;
+}
+.btn-app {
+  background: var(--primary-color);
+  font-size: 1rem;
+  font-family: var(--fonts);
+  border: none;
+  outline: none;
+  display: inline-block;
+  padding: 0.5rem 1.3rem;
+  color: var(--accent-color);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.btn-app:hover {
+  background-color: #e82848;
+  color: var(--accent-color);
 }
