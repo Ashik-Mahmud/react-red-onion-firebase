@@ -20,7 +20,7 @@ export const AuthContext = createContext(null);
 function App() {
     const location = useLocation();
     const [isAuth, setIsAuth] = useState(false);
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     useEffect(()=>{
         user?.uid ? setIsAuth(true) : setIsAuth(false)
     },[user])
