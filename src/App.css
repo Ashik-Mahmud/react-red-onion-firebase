@@ -65,3 +65,13 @@ li {
   background-color: #e82848;
   color: var(--accent-color);
 }
+.animated {
+  position: relative;
+  animation: fadeUp 0.5s ease-in-out backwards;
+  transform: scale(0.96);
+}
+@keyframes fadeUp {
+  100% {
+    transform: scale(1);
+  }
+}

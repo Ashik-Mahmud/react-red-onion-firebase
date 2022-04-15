@@ -1,4 +1,5 @@
 import React from "react";
+import About from "../About/About";
 import Foods from "../Foods/Foods";
 import Hero from "../Hero/Hero";
 
@@ -7,6 +8,7 @@ const Home = () => {
     <section className="home">
       <Hero />
       <Foods />
+      <About />
     </section>
   );
 };

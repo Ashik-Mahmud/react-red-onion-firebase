@@ -6,6 +6,7 @@ import Lunch from './Pages/Home/Foods/Lunch/Lunch';
 import Home from './Pages/Home/Home/Home';
 import SignIn from './Pages/Login/SignIn/SignIn';
 import SignUp from './Pages/Login/SignUp/SignUp';
+import Footer from './Shared/Footer/Footer';
 import Navbar from './Shared/Navbar/Navbar';
 
 function App() {
@@ -22,9 +23,8 @@ function App() {
          <Route path='/home' element={<Home />} />
          <Route path='/login' element={<SignIn />} />
          <Route path='/sign-up' element={<SignUp />} />
-        
-        
      </Routes>
+     <Footer />
     </>
   );
 }
