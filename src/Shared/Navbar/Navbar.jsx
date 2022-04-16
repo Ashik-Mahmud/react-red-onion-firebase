@@ -32,13 +32,26 @@ const Navbar = () => {
               <>
                 <li className="d-flex gap-3">
                   <img
-                    src={auth?.currentUser?.photoURL}
+                    src={
+                      auth?.currentUser?.photoURL
+                        ? auth?.currentUser?.photoURL
+                        : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8TeQ5iojLROQXom0AApSQbIamNDJRFDYgjw&usqp=CAU"
+                    }
                     width={40}
                     className="img-fluid rounded-circle"
-                    alt=""
+                    alt="profile"
+                    style={{
+                      height: "50px",
+                      width: "50px",
+                      objectFit: "cover",
+                    }}
                   />
                   <div>
-                    <span>{auth?.currentUser?.displayName}</span>
+                    <span>
+                      {auth?.currentUser?.displayName
+                        ? auth?.currentUser?.displayName
+                        : "not available"}
+                    </span>
                     <small className="d-block">
                       {auth?.currentUser?.email
                         ? auth?.currentUser?.email?.length > 15
