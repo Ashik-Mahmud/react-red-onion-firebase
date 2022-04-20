@@ -2,7 +2,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../App";
 import logo from "../../../Assets/images/logo2.png";
 import { auth, storage } from "../../../Firebase/Firebase";
@@ -34,11 +34,6 @@ const SignUp = () => {
   const handleCreateUser = async (event) => {
     event.preventDefault();
     if (!formInput.name) return toast.error("Name field is required.");
-    if (!formInput.phone) return toast.error("Phone field is required.");
-    if (!/[1-9]/.test(formInput.phone))
-      return toast.error("Phone number must need number");
-    if (formInput.phone.length < 11)
-      return toast.error("Phone number must need 11 chars");
     if (!formInput.email) return toast.error("Email field is required.");
     if (!formInput.password) return toast.error("Password field is required.");
     if (!formInput.avatar) return toast.error("Avatar field is required.");
@@ -69,7 +64,7 @@ const SignUp = () => {
             formInput.password
           )
             .then((user) => {
-              updateProfile(auth.currentUser, {
+              updateProfile(user.user, {
                 displayName: formInput.name,
                 photoURL: url ? url : "",
                 phoneNumber: formInput.phone,
@@ -80,9 +75,9 @@ const SignUp = () => {
             .catch((err) => toast.error(err.message.split(":")[1]));
         });
         setProgress(0);
-        formRef.current.reset();
       }
     );
+    formRef.current.reset();
   };
 
   return (
@@ -152,6 +147,12 @@ const SignUp = () => {
           <div className="my-3">
             <button className="btn-app">Sign Up into Account</button>
           </div>
+          <p>
+            Already have an Account?{" "}
+            <Link to="/login" className="colorize cursor-pointer">
+              Login
+            </Link>
+          </p>
           <SocialLogin />
         </form>
       </div>
